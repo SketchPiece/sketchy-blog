@@ -1,45 +1,45 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import MoreStories from '../components/pages/Main/MoreStories'
+import HeroPost from '../components/pages/Main/HeroPost'
+import Intro from '../components/common/Intro'
+import MainLayout from '../components/layouts/MainLayout'
+import { getPosts } from '../services/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../interfaces/post'
 
-type Props = {
-  allPosts: Post[]
+import Post from '../interfaces/Post'
+import { FC } from 'react'
+import { InferGetStaticPropsType } from 'next'
+
+interface HomeProps {
+  posts: Post[]
 }
 
-export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Home: FC<HomeProps> = ({ posts }) => {
+  const heroPost = posts[0]
+  const morePosts = posts.slice(1)
   return (
-    <Layout>
+    <MainLayout>
       <Head>
         <title>SketchyBlog</title>
       </Head>
-      <Container>
+      <div className="container mx-auto px-5">
         <Intro />
         {heroPost && (
           <HeroPost
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
-            author={heroPost.author}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
           />
         )}
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-      </Container>
-    </Layout>
+      </div>
+    </MainLayout>
   )
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const posts = getPosts([
     'title',
     'date',
     'slug',
@@ -49,6 +49,8 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts }
+    props: { posts: posts }
   }
 }
+
+export default Home

@@ -1,6 +1,6 @@
-import type Author from './author'
+import type Author from './Author'
 
-type PostType = {
+interface PostType {
   slug: string
   title: string
   date: string

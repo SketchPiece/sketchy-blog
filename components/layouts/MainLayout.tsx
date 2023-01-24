@@ -1,14 +1,13 @@
 import { FC, PropsWithChildren } from 'react'
 // import Alert from './alert'
-import Footer from './footer'
-import Meta from './meta'
+import Footer from '../common/Footer'
+import Meta from '../common/Meta'
 
-const Layout: FC<PropsWithChildren> = ({ children }) => {
+const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Meta />
       <div className="min-h-screen">
-        {/* <Alert preview={preview} /> */}
         <main>{children}</main>
       </div>
       <Footer />
@@ -16,4 +15,4 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
   )
 }
 
-export default Layout
+export default MainLayout
