@@ -1,9 +1,7 @@
-// import Avatar from './avatar'
 import DateFormatter from '../../common/DateFormatter'
 import CoverImage from '../Main/CoverImage'
 import PostTitle from './PostTitle'
 import { FC } from 'react'
-// import type Author from '../interfaces/author'
 
 interface PostHeaderProps {
   title: string

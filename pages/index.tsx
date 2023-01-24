@@ -1,11 +1,11 @@
-import MoreStories from '../components/pages/Main/MoreStories'
-import HeroPost from '../components/pages/Main/HeroPost'
-import Intro from '../components/common/Intro'
-import MainLayout from '../components/layouts/MainLayout'
-import { getPosts } from '../services/api'
+import MoreStories from 'components/pages/Main/MoreStories'
+import HeroPost from 'components/pages/Main/HeroPost'
+import Intro from 'components/common/Intro'
+import MainLayout from 'components/layouts/MainLayout'
+import { getPosts } from 'services/api'
 import Head from 'next/head'
 
-import Post from '../interfaces/Post'
+import Post from 'interfaces/Post'
 import { FC } from 'react'
 import { InferGetStaticPropsType } from 'next'
 

@@ -1,5 +1,5 @@
 import PostPreview from './PostPreview'
-import type Post from '../../../interfaces/Post'
+import type Post from 'interfaces/Post'
 
 interface MoreStoriesProps {
   posts: Post[]
