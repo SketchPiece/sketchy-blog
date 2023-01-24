@@ -5,10 +5,11 @@ import Image from 'next/image'
 interface CoverImageProps {
   title: string
   src: string
+  source?: string
   slug?: string
 }
 
-const CoverImage = ({ title, src, slug }: CoverImageProps) => {
+const CoverImage = ({ title, src, slug, source }: CoverImageProps) => {
   const image = (
     <Image
       src={src}
@@ -21,13 +22,19 @@ const CoverImage = ({ title, src, slug }: CoverImageProps) => {
     />
   )
   return (
-    <div className="sm:mx-0">
+    <div className="sm:mx-0 relative">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
           {image}
         </Link>
       ) : (
         image
+      )}
+      {source && (
+        <div
+          className="absolute bottom-0 right-0 mb-4 mr-4 text-sm text-gray-500"
+          dangerouslySetInnerHTML={{ __html: source }}
+        />
       )}
     </div>
   )

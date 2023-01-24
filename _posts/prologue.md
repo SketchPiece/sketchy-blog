@@ -2,6 +2,7 @@
 title: 'Prologue to my new life in Canada'
 excerpt: 'Hello internet, my name is Andrew! I am a web developer from Ukraine who recently relocated to Canada to study at KPU university. I have a strong interest in technology, particularly blockchain, artificial intelligence, and software development.'
 coverImage: 'https://source.unsplash.com/wO42Rmamef8'
+imageSource: Photo by <a href="https://unsplash.com/@nejc_soklic?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nejc Soklič</a> on <a href="https://unsplash.com/photos/wO42Rmamef8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 date: '2023-01-24T08:20:09+0000'
 ogImage:
   url: 'https://source.unsplash.com/wO42Rmamef8'

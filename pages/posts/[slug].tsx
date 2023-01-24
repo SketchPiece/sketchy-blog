@@ -61,6 +61,7 @@ const Post: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ post }) => {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
+                imageSource={post.imageSource}
               />
               <PostBody content={post.content} />
               <PostComments comments={comments} />
@@ -85,7 +86,8 @@ export const getStaticProps = async ({ params }) => {
     'author',
     'content',
     'ogImage',
-    'coverImage'
+    'coverImage',
+    'imageSource'
   ])
   const content = await markdownToHtml(post.content || '')
 

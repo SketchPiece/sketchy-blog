@@ -5,6 +5,7 @@ interface PostType {
   title: string
   date: string
   coverImage: string
+  imageSource: string
   author: Author
   excerpt: string
   ogImage: {

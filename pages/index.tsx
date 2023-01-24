@@ -7,7 +7,6 @@ import Head from 'next/head'
 
 import Post from 'interfaces/Post'
 import { FC } from 'react'
-import { InferGetStaticPropsType } from 'next'
 
 interface HomeProps {
   posts: Post[]
@@ -25,6 +24,7 @@ const Home: FC<HomeProps> = ({ posts }) => {
         <Intro />
         {heroPost && (
           <HeroPost
+            imageSource={heroPost.imageSource}
             title={heroPost.title}
             coverImage={heroPost.coverImage}
             date={heroPost.date}
@@ -45,7 +45,8 @@ export const getStaticProps = async () => {
     'slug',
     'author',
     'coverImage',
-    'excerpt'
+    'excerpt',
+    'imageSource'
   ])
 
   return {
