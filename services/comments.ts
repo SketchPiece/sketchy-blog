@@ -7,11 +7,9 @@ export const getComments = async (slug: string): Promise<PostComment[]> => {
     .from('comments')
     .select()
     .eq('post_slug', slug)
-    .order('created_at', { ascending: false })
+    .order('created_at', { ascending: true })
 
-  if (error) {
-    throw new Error(error.message)
-  }
+  if (error) throw new Error(error.message)
 
   return data
 }
@@ -32,7 +30,5 @@ export const createComment = async (createComment: CreateComment) => {
   }
   const { error } = await supabase.from('comments').insert([comment])
 
-  if (error) {
-    throw new Error(error.message)
-  }
+  if (error) throw new Error(error.message)
 }
