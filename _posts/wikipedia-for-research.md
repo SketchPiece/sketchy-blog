@@ -10,7 +10,7 @@ ogImage:
 
 Wikipedia is one of the most popular websites for collecting information. However, is it a reliable source for business research? Here I will try to go over the Pros and Cons of using Wikipedia for business research, and what you should to keep in mind when using it.
 
-### Pros of Using Wikipedia for Business Research:
+### Pros of using Wikipedia for business research:
 
 1. Consensus viewpoint: Wikipedia is an excellent source to get a consensus viewpoint on a subject (Caufield, n.d.). The articles are often the best available introduction to a topic, because of the strict rules about sourcing facts to reliable sources and the requirement for authors to adopt a neutral point of view (Caufield, n.d.).
 2. Reliable sources: A particular advantage of Wikipedia is that it pays special attention to the sources of all statements (Caufield, n.d.). If you find a claim in a Wikipedia article, you can almost always follow the footnote on the claim to a reliable source (Caufield, n.d.). This makes it easier for business research to find authoritative sources for claims.
