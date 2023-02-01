@@ -32,7 +32,7 @@ const CoverImage = ({ title, src, slug, source }: CoverImageProps) => {
       )}
       {source && (
         <div
-          className="absolute bottom-0 right-0 mb-4 mr-4 text-sm text-gray-500"
+          className="absolute bottom-0 right-0 mb-4 mr-4 text-sm text-white text-shadow"
           dangerouslySetInnerHTML={{ __html: source }}
         />
       )}
